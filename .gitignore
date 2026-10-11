@@ -1,0 +1,29 @@
+node_modules/
+dist/
+.env
+data/
+coverage/
+*.log
+.DS_Store
+
+# Local credentials, account state and generated publication artifacts.
+.env.*
+!.env.example
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+*.backup
+*.bak
+backups/
+exports/
+dlmm-*.json
+releases/
+
+# Preserve development history locally; publish only reviewed showcase material.
+ASTRA_PROMPT.md
+docs/internal/
+docs/ui-redesign/
+docs/DERIVE_SESSION.md
+docs/ARCHIVE_DERIVE_VENUES.md
+docs/UI_MULTI_ASSET_AUDIT.md

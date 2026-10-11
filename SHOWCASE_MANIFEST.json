@@ -1,0 +1,538 @@
+{
+  "project": "Deltaform",
+  "publicDemo": "synthetic-paper-only",
+  "files": [
+    {
+      "path": ".env.example",
+      "sha256": "84c915c54df283e174d6b0d5570931d3d556726c958ada56e1628ba268254328"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "f9ef7750e10d3393154698dbecfbc8a986760c1b56e9ff86a10b7f7ad303a19b"
+    },
+    {
+      "path": "README.md",
+      "sha256": "e0b89d39bf334248e47a6646188b4003d361b4509230a719fee298a49f27a06a"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "sha256": "971dbb86ab6f8b7b0831a5706b61383217fab5507de85b8e49bf9d8783bcb823"
+    },
+    {
+      "path": "docs/BYBIT_API.md",
+      "sha256": "44dcddd90613411db6b776897dbe2036837231117416d2f1411aa0cb19b51a9d"
+    },
+    {
+      "path": "docs/DEMO.md",
+      "sha256": "41987851bec6112dbaec9de661eec115bb8fea738f3e7925dbe46945e6476904"
+    },
+    {
+      "path": "docs/DEPENDENCIES.md",
+      "sha256": "2cd87c18d0a602871d96c9a002169af66b3a1a22e38aabf901a29fcd9bb4e386"
+    },
+    {
+      "path": "docs/MATH.md",
+      "sha256": "db3fb520b8c34c171123f1fcd7603a4760a33bf145a0e96b0e5de199e798fe34"
+    },
+    {
+      "path": "docs/MULTI_ASSET_VENUES.md",
+      "sha256": "2493b252e034edc64db47230ba37219c344c7e815f4d5920a515576cb9d8e478"
+    },
+    {
+      "path": "docs/PUBLICATION.md",
+      "sha256": "176fd54232f8d2029cdea6d722f93924a66bcc8ba1ebb65479ec054ad1c081ba"
+    },
+    {
+      "path": "docs/REALIZED_VOLATILITY.md",
+      "sha256": "98ebec1075df40c236c508b437143008da8466a447b18d74034afe4a0e697fee"
+    },
+    {
+      "path": "docs/ROADMAP.md",
+      "sha256": "0bfdecdab17a653f3f646edd48023808af6d3836f8331e641af837182fbe4fe6"
+    },
+    {
+      "path": "docs/RUNBOOK.md",
+      "sha256": "8b858a03b116f49b7607314fb13b5bcf69d6390402e10815c8c29be0a65d84b9"
+    },
+    {
+      "path": "docs/SIMULATION.md",
+      "sha256": "9220b51c19dd3b4bea844ddb585413971fba1c8665f3a0378929db718783046d"
+    },
+    {
+      "path": "docs/SOURCES.md",
+      "sha256": "c32dff25f36a910c6377f697e60bf52054c3ae9d610f20bc13b9fcdff961f81c"
+    },
+    {
+      "path": "docs/STRATEGY.md",
+      "sha256": "e21fc0602c93114640c0d0848b6c4585a985156fd064bce5bdef912f3300c5aa"
+    },
+    {
+      "path": "docs/UI_QA.md",
+      "sha256": "1bfc99aeafb79fb30445ea7af7a5c8b20a18e18f8913d0aa2a918be8af0906c3"
+    },
+    {
+      "path": "docs/VALIDATION.md",
+      "sha256": "4c3012a90fdc0742d17d7b5a066e4b356704df6e76b63a90c4a600bc200801c5"
+    },
+    {
+      "path": "docs/VENUES.md",
+      "sha256": "d01bdd8944ecba568e3136b0b2ef1af97e326018a01f2872f2b0ebe5e45002d5"
+    },
+    {
+      "path": "docs/VERIFICATION.md",
+      "sha256": "bce30cc653f050736592786ae966fefca9f706b706e8df395a11bdc0220dc100"
+    },
+    {
+      "path": "docs/dependency-audit.json",
+      "sha256": "62e49cac4ad70ec3efcfce6e7f865e27f55dd8ba70a9135900ad589129fe36f5"
+    },
+    {
+      "path": "docs/order-recovery.md",
+      "sha256": "a41e410663d75f81b58396340abc768cd0d62852f30100e272384920e0b4e6b5"
+    },
+    {
+      "path": "docs/showcase/paper-options-review.jpg",
+      "sha256": "4201def7eb30e0bffce45b0b0e38247f739a9003e087626afbc5fd614c2bd7b5"
+    },
+    {
+      "path": "docs/showcase/paper-overview.jpg",
+      "sha256": "c41e956e55bb315a6258b8e69fdf8f5778b8ae8ccbfd10092551785c04acb08b"
+    },
+    {
+      "path": "docs/showcase/paper-payoff.jpg",
+      "sha256": "787242949836668cba0a26107fc91864c640541c21b44995d650b0f41fbdab12"
+    },
+    {
+      "path": "docs/venue-verification.json",
+      "sha256": "df964194a02c9f0a109b26f7e9c35d462fd3f4c50b18bd223abde397f11e6bad"
+    },
+    {
+      "path": "index.html",
+      "sha256": "abc5a197b064ac5850e42fba21771c181c73f5d1e32301658cfdb28a9601b9f3"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "443608ed34c80c610b0fec6c14c910a9b03e3ccd56c6b8fefa47c580311b7a4e"
+    },
+    {
+      "path": "package.json",
+      "sha256": "5f668bd10085a45e3f56a7c345cd9b8586ac1744482de29937b6b22ddf3f2e02"
+    },
+    {
+      "path": "scripts/import-realized-volatility-profile.ts",
+      "sha256": "e46dbe9aba6c16dd0b442a1bc8d4db0caf0be0c29dcaf805443b3b57bd215aba"
+    },
+    {
+      "path": "scripts/package-showcase.ts",
+      "sha256": "3108e43e56c88c7c823e22f7abd5d31172fc7419ecefddaa9af66fa0c82ed479"
+    },
+    {
+      "path": "scripts/refresh-realized-volatility.ts",
+      "sha256": "a91efacdaca0c90b88726e7abb1bf92fbaf58138737e677243e4aea1050df5c5"
+    },
+    {
+      "path": "scripts/ui-qa.ts",
+      "sha256": "1971d77f158a5e70b63ac171d1d9f33969593f30f5c4fa03093ec212d30f1bb1"
+    },
+    {
+      "path": "server/auth.ts",
+      "sha256": "9f92914eda61a2ccf7ead8018dd25ff02744e933fbd32e740028a1120c4d93b1"
+    },
+    {
+      "path": "server/bybit-options.ts",
+      "sha256": "4095a2adfe6b3f44468ced02612cfa589011d131db11a5cc7bc39048a0fa54b9"
+    },
+    {
+      "path": "server/capital-tracking.ts",
+      "sha256": "cf0a08f3549d105a00452567657609f9902c263243d0d723a6b78aa8e0146b80"
+    },
+    {
+      "path": "server/derive-session.ts",
+      "sha256": "aa7a330c89b17d67f10b456745b91b3e1c7d8ad1366e32de8fc61fcb3ac08e32"
+    },
+    {
+      "path": "server/engine.ts",
+      "sha256": "3e5a3c20d4843654995ca95f8971b6b9bb0f1f5d9c668df8f9af72c65fac2e57"
+    },
+    {
+      "path": "server/hedge-recovery.ts",
+      "sha256": "dffdf31df2aa8f44f15c5cd03358a7237b1442c1b7d5096622021d769145a8f6"
+    },
+    {
+      "path": "server/index.ts",
+      "sha256": "dc054ba6797aa07e3ef74d333ac7e2d988181667885b45a1993f1115cc961d88"
+    },
+    {
+      "path": "server/live.ts",
+      "sha256": "dd5c7cfb199d5cc6cc553c4028ee46fc34770ffe1cf132150560dd7123bee12f"
+    },
+    {
+      "path": "server/mapped-book-migration.ts",
+      "sha256": "3758b109ff902052315db1cce05a791eaae5cf6be8990dec91918c180fa2bc1d"
+    },
+    {
+      "path": "server/multi-asset.ts",
+      "sha256": "83547ff6aaba9c042c57351c0a519d0100331ff764415c9f46288777b940593e"
+    },
+    {
+      "path": "server/policy.ts",
+      "sha256": "978761cdd0afe77b7f7aff3b73668963fdf0d1c099808955bdf1ead2021601f9"
+    },
+    {
+      "path": "server/realized-volatility.ts",
+      "sha256": "9b65c66ad46a8f272c3eac65de069d926ec022c6fc700c55fa8ce85e8e969dbf"
+    },
+    {
+      "path": "server/secrets.ts",
+      "sha256": "e1757b597cc905635e8036f8d8e619dc10617212fbfdf834f953aa7730eb0353"
+    },
+    {
+      "path": "server/store.ts",
+      "sha256": "6dd30f09eca8376092a5acf2d1662e672439a73bc6ce7200b18d27f8690f72de"
+    },
+    {
+      "path": "src/client/App.tsx",
+      "sha256": "c724c95ed0beb6e3fa4ef74453253716a8442c84ae0b77b15ade59568cad0028"
+    },
+    {
+      "path": "src/client/DeriveSessionSetup.tsx",
+      "sha256": "d2979c7d6187c4ee2e7c249c4888471f6238609d7dcbae2c9256d8de0ca20c12"
+    },
+    {
+      "path": "src/client/HedgeRecovery.tsx",
+      "sha256": "8eab1dd181bc0997fb0f92fdeecdbd6aa8e7882923e7c8e3f99319133a092931"
+    },
+    {
+      "path": "src/client/MultiAssetOverview.tsx",
+      "sha256": "96d2c1f0cadd923da5c00758377cbdab39244f3740546d7100be2a7e43bdeff9"
+    },
+    {
+      "path": "src/client/TradingRisk.tsx",
+      "sha256": "7a07ad99541f33e0722d3b666e6125699c4c89d095ddcf380ee5d6c498e4c0b8"
+    },
+    {
+      "path": "src/client/api.ts",
+      "sha256": "e57856cc51ab54a4e3d581276d2062c3949c80cba7debcfb86868b559d4d3762"
+    },
+    {
+      "path": "src/client/asset-settings.ts",
+      "sha256": "33e51e7298994197dac985831089502c66023a716500b2d1138e5a8693357ba6"
+    },
+    {
+      "path": "src/client/cash-greeks.ts",
+      "sha256": "ab480fa5ff7a183c3944afed54283c4d8a6ed19fd33408c68efa18a23e3c9135"
+    },
+    {
+      "path": "src/client/evm-wallet.ts",
+      "sha256": "ea037bcd83f02b15b247c56a89c1f4ba632c5c0cd7c439b8e4ab5f31ffa7759e"
+    },
+    {
+      "path": "src/client/main.tsx",
+      "sha256": "1568383a56df0881eb825d9f451c9f76ef0445a5245fa0f2c745e8432e834c80"
+    },
+    {
+      "path": "src/client/margin-headroom.ts",
+      "sha256": "fefd59af973e9a2e86cef12e480f3232805aba98195b655e4be68dd6573469bd"
+    },
+    {
+      "path": "src/client/portfolio-risk.ts",
+      "sha256": "2f8cde37d88373143119431bd313be1b9521c9e4d3681339877709ec70405f1e"
+    },
+    {
+      "path": "src/client/solana-wallet.ts",
+      "sha256": "d526a94ef422f677bb6746ffa5ee88c407e05a24e4d39843ed57556d07f85290"
+    },
+    {
+      "path": "src/client/styles.css",
+      "sha256": "d17f777fa07a97fb6a787b13eb1292508798a2d8e81de9418277b7a3cb1ba3d4"
+    },
+    {
+      "path": "src/client/terminal.css",
+      "sha256": "49989014ff4e3ee4445ff28441ff88a6d7483bc2a9eb2cb0b7800f5f103444c0"
+    },
+    {
+      "path": "src/quant/fit.ts",
+      "sha256": "544a512dcdc4ffa919747301a2e8baba8b8ac992b66941bbf51393abecbcba57"
+    },
+    {
+      "path": "src/quant/fixtures.ts",
+      "sha256": "9f4f9bca61b5b0122b38497a1e92980d0b43828056b79e10d4eda0aca6d85bce"
+    },
+    {
+      "path": "src/quant/gamma.ts",
+      "sha256": "a5d51a1c66c96dd289b7784dfec4f1e7d906c784416e40b2a0f527128906e3f7"
+    },
+    {
+      "path": "src/quant/index.ts",
+      "sha256": "6c223d2376d50a35d6b968434f21504657843112eb79dd5c52c2aa05a950bee1"
+    },
+    {
+      "path": "src/quant/math.ts",
+      "sha256": "e9bc313f7f4a5d952a68d39432c1ba9b59140251f7d2b5a4221c5953c499bdf7"
+    },
+    {
+      "path": "src/quant/risk-model.ts",
+      "sha256": "70f9a671ed632d5f19100858db570734ae3e69c1b77b9290fd5ee8cd7c7f7f35"
+    },
+    {
+      "path": "src/quant/simulation.ts",
+      "sha256": "25bc6f6df42ed44aa54d2b323b2f700e844105170ed2bfcfbc4f00ab552f9454"
+    },
+    {
+      "path": "src/shared/assets.ts",
+      "sha256": "fa0a0b275b347a5eebe46e961bd707d593163fa30afc76a010ee7255ae08cfcf"
+    },
+    {
+      "path": "src/shared/eip712.ts",
+      "sha256": "bf17c4118be34e88060b9f2a10465bb472ba0cfc6ade3a77d6570da704a428d7"
+    },
+    {
+      "path": "src/shared/hedge-recovery.ts",
+      "sha256": "0118a58cefbb0d9e0dffc4ef406c6f8a7bf1f1f879abfc7e965fd71293767aef"
+    },
+    {
+      "path": "src/shared/multi-asset.ts",
+      "sha256": "c9d72886e92a04d0a6366543352283d4cb6ea66b090e806705c5fa32b8049507"
+    },
+    {
+      "path": "src/shared/option-execution.ts",
+      "sha256": "966e60d14b3b851eeb74b68ad079eba075568130b78b5de351d0b25706d52751"
+    },
+    {
+      "path": "src/shared/types.ts",
+      "sha256": "92f15549fb3a3a06247ec404862a05f2cb1fa0bc9253206a85b66d479c545fbd"
+    },
+    {
+      "path": "src/venues/bybit.ts",
+      "sha256": "6da4a32d8e6de7c2d413a7156a220043429247f868229e775d1300e5830ae2c7"
+    },
+    {
+      "path": "src/venues/derive-auth.ts",
+      "sha256": "74b3088354e932a01273e71ae91e3e6df14d79f7a123ca3e1d5bfd6ed74751d9"
+    },
+    {
+      "path": "src/venues/derive-session.ts",
+      "sha256": "2c53d1513d6ba6a73e2a871fb9c8551fef9dcecd051856eaf4ea052917cd2b5a"
+    },
+    {
+      "path": "src/venues/derive.ts",
+      "sha256": "9f741dbfbc3c6663e01f4fa402cd8e64e2fd10560777c4508a8fc1632caf3933"
+    },
+    {
+      "path": "src/venues/http.ts",
+      "sha256": "6ea9a3a1cbdffe8bd2a5144018201f855cc595a4875ff51438e8a4f83237a89e"
+    },
+    {
+      "path": "src/venues/hyperliquid-collateral.ts",
+      "sha256": "4aff9e0cb5a81e4c7bc4aca482ce3df9a95053caca57896885b9f5d02e7edcc0"
+    },
+    {
+      "path": "src/venues/hyperliquid-dex-state.ts",
+      "sha256": "9ab2b5c0a1cb8f05ff2d535da1c986495d75ca1e2d0591ed99f98b5b684f6580"
+    },
+    {
+      "path": "src/venues/hyperliquid-recovery.ts",
+      "sha256": "0637a7096666ae85c04dbdc2644f71957d6612db8df192fe65e3d66ae53cf0ac"
+    },
+    {
+      "path": "src/venues/hyperliquid.ts",
+      "sha256": "76b9ba7854b723dc4142d4a4a46e75e9acb5cf6d5e6588c2b3c1c9a1de8d86e4"
+    },
+    {
+      "path": "src/venues/index.ts",
+      "sha256": "ea342a100e821a2f80c1834fdccd59cec015dd40fd9389674ef013f4fcdbdc9d"
+    },
+    {
+      "path": "src/venues/meteora.ts",
+      "sha256": "d903bf50455b21f820b75dca4b723564d7bd3d2670db3c44109a8d493e47a0c5"
+    },
+    {
+      "path": "src/venues/probe.ts",
+      "sha256": "f0c3ab96a0a8869c67bc2e7004925692704efc2cd0a5a61885534a45c05d52c2"
+    },
+    {
+      "path": "tests/bybit-adapter.test.ts",
+      "sha256": "b1dd52a54c0bce93cca33c6a8938a286f2c1e387fb182e604f0fc2873f67bc74"
+    },
+    {
+      "path": "tests/bybit-options-state.test.ts",
+      "sha256": "1043c45177080f1431d01e6534a50e887ad0d45760bfef22ce096c8263c653f3"
+    },
+    {
+      "path": "tests/capital-tracking.test.ts",
+      "sha256": "53fb6a9bd6dbf14c9a0f39bfc5ed48dc01921f1a1f2ab4bc732b40fa153cf0b2"
+    },
+    {
+      "path": "tests/cash-greeks.test.ts",
+      "sha256": "6a8f5b1685e6fb7dbbf5fe1a2b5e21292f2bb975a618009bf9a6723072d0f79e"
+    },
+    {
+      "path": "tests/client-asset-settings.test.ts",
+      "sha256": "ade2e9c20f428bb4a630cfc2f8fb6466b29c56d2ce98eed72bcf7d0ad2332f7d"
+    },
+    {
+      "path": "tests/client-margin-headroom.test.ts",
+      "sha256": "79b70b70ecf504d0ed696748fa6e161dd1dfd139572a53afa9c535e33a2dbe81"
+    },
+    {
+      "path": "tests/derive-account.test.ts",
+      "sha256": "e8b366ee7f122471c669d6fc1a8ce3fcede6dd5a90ee531d08f2d3c93446f5ea"
+    },
+    {
+      "path": "tests/derive-option-execution.test.ts",
+      "sha256": "da1223e321111f1a29c2e515a030f7b50dab13d1f67181ae63959e4fd6894dba"
+    },
+    {
+      "path": "tests/derive-session-state.test.ts",
+      "sha256": "ec9c7947f35e756375062d554eb0b32b1229b649c271783c6d58459f0ca369d4"
+    },
+    {
+      "path": "tests/derive-session.test.ts",
+      "sha256": "d4c8e3240c92d77e2241a0390fc41885fb74f4f26e9e8e476e69b485a1f2cf9d"
+    },
+    {
+      "path": "tests/derive-signer-access.test.ts",
+      "sha256": "b8698fb0d4f4f58642080987c50b9d2c32c7eb8f95c053859b69b96d23e1f61f"
+    },
+    {
+      "path": "tests/derive-trading-access.test.ts",
+      "sha256": "e8129e2683c947e3e37ea1446e619bd855fef89547669f91033d8df1e6284c8b"
+    },
+    {
+      "path": "tests/derive-wallet-lookup.test.ts",
+      "sha256": "94aefd336cb080d3273f84306d9b65106e1831f7c7435276206f542a7edd0afa"
+    },
+    {
+      "path": "tests/eip712-wallet.test.ts",
+      "sha256": "8e120b76d2818637994128e298a35ef23644b1e5b601f25270936688172147e2"
+    },
+    {
+      "path": "tests/engine.test.ts",
+      "sha256": "78bdd98c5da597aa2be72d0796dd0b145aeec04dc6e1e06285ca0ae9db91071b"
+    },
+    {
+      "path": "tests/evm-wallet.test.ts",
+      "sha256": "2408daf3dfa7ad50390ae179d977b0a7ce1b03e994ff3503fb28eceeb8606464"
+    },
+    {
+      "path": "tests/gamma-fit.test.ts",
+      "sha256": "08dd0f5cae940563066619416c99b5a65145c42f963fb702d017cc86109b6467"
+    },
+    {
+      "path": "tests/hedge-order-gateway.test.ts",
+      "sha256": "f73e281e0e3f39924f7e3cb3336798713801c0578e27dfd40b33661331917aa9"
+    },
+    {
+      "path": "tests/hedge-recovery-ui.test.ts",
+      "sha256": "79d0dee1b8f63edfea5aa8c85bcae769545f13a07bb8ca4d52905002900e96e8"
+    },
+    {
+      "path": "tests/hedge-recovery.test.ts",
+      "sha256": "95ff3e45bd897c0f799761bdfa951455d803d632414e86179633cc03da40b224"
+    },
+    {
+      "path": "tests/hyperliquid-collateral.test.ts",
+      "sha256": "3c31172c33d22bbccc3a402ba41c0c1c2484e7a3a081254a55e70d64602974a1"
+    },
+    {
+      "path": "tests/hyperliquid-recovery.test.ts",
+      "sha256": "c29fe72c0ae56158fb921af17e95c151e85f6cca448f5d2411066d1311201a8e"
+    },
+    {
+      "path": "tests/mapped-book-migration.test.ts",
+      "sha256": "c6fdef9faf94252bb1a7eeb2a49c84952868551aacc693398daa06c7769150e6"
+    },
+    {
+      "path": "tests/market-refresh.test.ts",
+      "sha256": "d05714815d4a34fb1214679e9e6720f11cb004175d5bebf905d6d68ff516920a"
+    },
+    {
+      "path": "tests/multi-asset-engine.test.ts",
+      "sha256": "dd917b98793189fc8ddaea80ab93013e44905f1221603899f88371e3eb7fc1a9"
+    },
+    {
+      "path": "tests/multi-asset-gateway.test.ts",
+      "sha256": "049f47e36f7b8bd7f4c6a75e006087ed09cda066c12b0325042d028b3e536808"
+    },
+    {
+      "path": "tests/multi-asset-quant.test.ts",
+      "sha256": "4a69c89dd6b05370ed0a2e3eec8d59d9cefa4afc014a9208fe25a9ff05b4506a"
+    },
+    {
+      "path": "tests/multi-asset-ui.test.ts",
+      "sha256": "d24917cd03dbb89c815e68031fdc0175cb8a126f2bdd7fca2848ac570367701b"
+    },
+    {
+      "path": "tests/multi-asset-venues.test.ts",
+      "sha256": "59d3df1090974aaa141296946eb3e29917514d93a04c7eaa628c41af75dad12a"
+    },
+    {
+      "path": "tests/options-venue-migration.test.ts",
+      "sha256": "04d08e792a805aa30cccf6871e04194171956be7065c9182db4df242899f2159"
+    },
+    {
+      "path": "tests/policy.test.ts",
+      "sha256": "989fa26190e433a7cffb745ef19832eb7e6a0aadbf555e400c059258cb8496c1"
+    },
+    {
+      "path": "tests/portfolio-risk.test.ts",
+      "sha256": "001ddda213a3daf2971d027846bf5adb6da14796cbe473f53b3b12152ee7ede3"
+    },
+    {
+      "path": "tests/quant.fit.test.ts",
+      "sha256": "424669fa90bbb435f864232eb850a8aab53eb6bc2e9ac6e87468b14a85ac6554"
+    },
+    {
+      "path": "tests/quant.math.test.ts",
+      "sha256": "d7b65baaf0af958bd08e1ef6e3e532905612c10521303fa9b0522f42346f306e"
+    },
+    {
+      "path": "tests/realized-volatility.test.ts",
+      "sha256": "bbc9d34c1c5d4e9b764fcbda3013deb4e382c72a022ebda527851e19349996b3"
+    },
+    {
+      "path": "tests/risk-table-sorting.test.ts",
+      "sha256": "7c68c4bf3f1c0dd6337ed702b97c7ff1e32c5438788d37a3bcb1682894de85d9"
+    },
+    {
+      "path": "tests/solana-wallet.test.ts",
+      "sha256": "ea9983062b06b27b955a116afdd0e46a5efc5d0b3f030347e04ec067f99fe400"
+    },
+    {
+      "path": "tests/store.test.ts",
+      "sha256": "70dfdb3e3956b5b95dc4d9a7d8b52a2b8a6b091c3723cce5a83ecf907366c21f"
+    },
+    {
+      "path": "tests/terminal-presentation.test.ts",
+      "sha256": "fbd52e5bcf9dcf201766cbc0183ed7da1e715a8c68ef322744a1420a0ae81c9b"
+    },
+    {
+      "path": "tests/venue-http-errors.test.ts",
+      "sha256": "3fc40213beae9d0a8ad902ab3b2c640c59418d89b754c370cbe2223c448f1378"
+    },
+    {
+      "path": "tests/venues-attribution.test.ts",
+      "sha256": "2a2e278d376443e00fdd8e2a516b50877d38a36c492b7ed771d3174cf6d123bb"
+    },
+    {
+      "path": "tests/venues.test.ts",
+      "sha256": "392402bc711c41db3ab9e90b1a55786284649de306ca804b31abdee5ec46a198"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "f5b14dfe5e3a5c53fac4ca068ff940f1024c573d3ea06b3d71efe9bbfb4c66e6"
+    },
+    {
+      "path": "vite.config.ts",
+      "sha256": "dd1b92ade911d2d98c0667f4e8f3eff662e50b2036dd857fad806c117c074923"
+    }
+  ],
+  "excluded": [
+    "credentials",
+    "account databases and exports",
+    "internal prompts",
+    "historical live screenshots",
+    "Git history",
+    "dependencies and builds"
+  ]
+}

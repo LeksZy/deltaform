@@ -1,0 +1,131 @@
+{
+  "checkedAt": "2026-10-11",
+  "timezone": "Europe/Moscow",
+  "command": "npm audit --json",
+  "counts": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 5,
+    "critical": 2,
+    "total": 7
+  },
+  "packages": [
+    {
+      "name": "@meteora-ag/dlmm",
+      "severity": "high",
+      "direct": true,
+      "via": [
+        "@solana/spl-token"
+      ],
+      "fixAvailable": false
+    },
+    {
+      "name": "@solana/buffer-layout-utils",
+      "severity": "high",
+      "direct": false,
+      "via": [
+        "bigint-buffer"
+      ],
+      "fixAvailable": false
+    },
+    {
+      "name": "@solana/spl-token",
+      "severity": "high",
+      "direct": false,
+      "via": [
+        "@solana/buffer-layout-utils"
+      ],
+      "fixAvailable": false
+    },
+    {
+      "name": "bigint-buffer",
+      "severity": "high",
+      "direct": false,
+      "via": [
+        {
+          "source": 1103747,
+          "name": "bigint-buffer",
+          "dependency": "bigint-buffer",
+          "title": "bigint-buffer Vulnerable to Buffer Overflow via toBigIntLE() Function",
+          "url": "https://github.com/advisories/GHSA-3gc7-fjrx-p6mg",
+          "severity": "high",
+          "cwe": [
+            "CWE-120"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "range": "<=1.1.5"
+        }
+      ],
+      "fixAvailable": false
+    },
+    {
+      "name": "concurrently",
+      "severity": "critical",
+      "direct": true,
+      "via": [
+        "shell-quote"
+      ],
+      "fixAvailable": {
+        "name": "concurrently",
+        "version": "9.2.5",
+        "isSemVerMajor": false
+      }
+    },
+    {
+      "name": "shell-quote",
+      "severity": "critical",
+      "direct": false,
+      "via": [
+        {
+          "source": 1241332,
+          "name": "shell-quote",
+          "dependency": "shell-quote",
+          "title": "shell-quote: `quote()` command injection via a line terminator in a token after a `{ comment }` token",
+          "url": "https://github.com/advisories/GHSA-pqg4-j6r4-53mv",
+          "severity": "critical",
+          "cwe": [
+            "CWE-78"
+          ],
+          "cvss": {
+            "score": 8.1,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+          },
+          "range": ">=1.8.4 <1.11.0"
+        }
+      ],
+      "fixAvailable": {
+        "name": "concurrently",
+        "version": "9.2.5",
+        "isSemVerMajor": false
+      }
+    },
+    {
+      "name": "source-map-js",
+      "severity": "high",
+      "direct": false,
+      "via": [
+        {
+          "source": 1241209,
+          "name": "source-map-js",
+          "dependency": "source-map-js",
+          "title": "source-map-js allows event-loop denial of service through indexed source-map section offsets",
+          "url": "https://github.com/advisories/GHSA-68fv-2mgg-jv7q",
+          "severity": "high",
+          "cwe": [
+            "CWE-1284"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "range": ">=1.0.0 <1.2.2"
+        }
+      ],
+      "fixAvailable": true
+    }
+  ]
+}

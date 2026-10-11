@@ -1,0 +1,59 @@
+{
+  "name": "dlmm-hedge-lab",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n api,web \"tsx watch server/index.ts\" \"vite --host 127.0.0.1\"",
+    "build": "tsc --noEmit && vite build",
+    "start": "tsx server/index.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "demo:showcase": "tsx scripts/ui-qa.ts",
+    "showcase:package": "tsx scripts/package-showcase.ts"
+  },
+  "dependencies": {
+    "@meteora-ag/dlmm": "1.9.14",
+    "@nktkas/hyperliquid": "0.33.3",
+    "@solana/wallet-standard-features": "1.5.0",
+    "@solana/web3.js": "1.99.0",
+    "@vitejs/plugin-react": "5.2.0",
+    "@wallet-standard/app": "1.1.1",
+    "@wallet-standard/base": "1.1.1",
+    "@wallet-standard/features": "1.1.1",
+    "bn.js": "5.2.5",
+    "concurrently": "9.2.4",
+    "decimal.js": "10.6.0",
+    "dotenv": "17.4.2",
+    "express": "5.2.1",
+    "lucide-react": "1.48.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "recharts": "3.10.1",
+    "tsx": "4.23.15",
+    "viem": "2.56.9",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@metamask/eth-sig-util": "9.0.0",
+    "@types/bn.js": "5.2.0",
+    "@types/express": "5.0.6",
+    "@types/node": "22.20.4",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "typescript": "5.9.3",
+    "vite": "7.3.6",
+    "vitest": "4.1.11"
+  },
+  "overrides": {
+    "@coral-xyz/anchor": {
+      "toml": "4.2.0"
+    },
+    "@solana/web3.js": {
+      "jayson": "5.0.0"
+    },
+    "@metamask/utils": {
+      "uuid": "11.1.1"
+    }
+  }
+}

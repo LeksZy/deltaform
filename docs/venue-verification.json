@@ -1,0 +1,167 @@
+{
+  "checkedAt": "2026-09-27T19:30:59.754Z",
+  "mode": "unauthenticated read-only",
+  "bybit": {
+    "ok": true,
+    "status": "364 SOL options; 11 without executable best-ask depth. V5 mainnet; USDT settlement. USDT/USDC parity approximation; basis 1.50 bps. Fees use public non-VIP ceiling, account rate checked before execution.",
+    "index": 122.98975146,
+    "count": 364,
+    "withAsk": 353,
+    "sample": [
+      {
+        "name": "SOL-30OCT26-145-P-USDT",
+        "venue": "bybit",
+        "quoteCoin": "USDT",
+        "settleCoin": "USDT",
+        "underlying": "SOL",
+        "strike": 145,
+        "expiry": 1793347200000,
+        "type": "put",
+        "multiplier": 1,
+        "minSize": 1,
+        "sizeStep": 1,
+        "tickSize": 0.01,
+        "bid": 22.61,
+        "ask": 25.8,
+        "askSize": 261,
+        "mark": 23.8616303,
+        "iv": 0.5879,
+        "greeks": {
+          "delta": -0.79704191,
+          "gamma": 0.01304317,
+          "vega": 0.10403994,
+          "theta": -0.09403172
+        },
+        "timestamp": 1790537460587,
+        "source": "live",
+        "asks": [
+          [
+            25.8,
+            261
+          ]
+        ],
+        "feeRate": 0.0003,
+        "feeModel": {
+          "kind": "bybit",
+          "fixed": 0,
+          "underlyingRate": 0.0003,
+          "premiumCapRate": 0.07,
+          "spot": 122.98975146
+        },
+        "settlement": "USDT cash, European; quantity is SOL units (multiplier 1). Vega per 1 IV percentage point; theta per day. USDT/USDC parity is approximate. Delivery fee metadata: 0.0002; terminal payoff excludes delivery fees."
+      },
+      {
+        "name": "SOL-30OCT26-145-C-USDT",
+        "venue": "bybit",
+        "quoteCoin": "USDT",
+        "settleCoin": "USDT",
+        "underlying": "SOL",
+        "strike": 145,
+        "expiry": 1793347200000,
+        "type": "call",
+        "multiplier": 1,
+        "minSize": 1,
+        "sizeStep": 1,
+        "tickSize": 0.01,
+        "bid": 2.12,
+        "ask": 2.39,
+        "askSize": 122,
+        "mark": 2.2716303,
+        "iv": 0.5879,
+        "greeks": {
+          "delta": 0.2029581,
+          "gamma": 0.01304317,
+          "vega": 0.10403994,
+          "theta": -0.09403172
+        },
+        "timestamp": 1790537460587,
+        "source": "live",
+        "asks": [
+          [
+            2.39,
+            122
+          ]
+        ],
+        "feeRate": 0.0003,
+        "feeModel": {
+          "kind": "bybit",
+          "fixed": 0,
+          "underlyingRate": 0.0003,
+          "premiumCapRate": 0.07,
+          "spot": 122.98975146
+        },
+        "settlement": "USDT cash, European; quantity is SOL units (multiplier 1). Vega per 1 IV percentage point; theta per day. USDT/USDC parity is approximate. Delivery fee metadata: 0.0002; terminal payoff excludes delivery fees."
+      }
+    ],
+    "timestamp": 1790537460587
+  },
+  "meteora": {
+    "ok": true,
+    "count": 95,
+    "pools": [
+      {
+        "address": "5rCf1DM8LjKTw4YqhnoLcngyZYeNnQqztScTogYHAS6",
+        "name": "SOL-USDC",
+        "price": 122.99877146455272,
+        "binStep": 4,
+        "tvl": 4020649.880345358,
+        "volume24h": 18937818.341674164,
+        "inverted": false,
+        "timestamp": 1790537461163
+      },
+      {
+        "address": "BGm1tav58oGcsQJehL9WXBFXF7D27vZsKefj4xJKD5Y",
+        "name": "SOL-USDC",
+        "price": 123.07606524274378,
+        "binStep": 10,
+        "tvl": 3310274.483201649,
+        "volume24h": 5957851.799425988,
+        "inverted": false,
+        "timestamp": 1790537461163
+      },
+      {
+        "address": "BVRbyLjjfSBcoyiYFuxbgKYnWuiFaF9CSXEa5vdSZ9Hh",
+        "name": "SOL-USDC",
+        "price": 122.95894090185416,
+        "binStep": 20,
+        "tvl": 1993005.845120967,
+        "volume24h": 601865.4181210425,
+        "inverted": false,
+        "timestamp": 1790537461163
+      },
+      {
+        "address": "CgqwPLSFfht89pF5RSKGUUMFj5zRxoUt4861w2SkXaqY",
+        "name": "SOL-USDC",
+        "price": 122.99290382747714,
+        "binStep": 80,
+        "tvl": 794439.6615310169,
+        "volume24h": 508194.3896539757,
+        "inverted": false,
+        "timestamp": 1790537461163
+      },
+      {
+        "address": "HTvjzsfX3yU6BUodCjZ5vZkUrAxMDTrBs3CJaq43ashR",
+        "name": "SOL-USDC",
+        "price": 123.00931103734894,
+        "binStep": 1,
+        "tvl": 418490.698638511,
+        "volume24h": 11219645.205144957,
+        "inverted": false,
+        "timestamp": 1790537461163
+      }
+    ]
+  },
+  "hyperliquid": {
+    "ok": true,
+    "coin": "SOL",
+    "asset": 5,
+    "mark": 122.97,
+    "oracle": 122.99,
+    "funding": 0.0000125,
+    "sizeStep": 0.01,
+    "szDecimals": 2,
+    "minNotional": 10,
+    "maxLeverage": 20,
+    "timestamp": 1790537460404
+  }
+}
