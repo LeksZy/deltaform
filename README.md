@@ -35,7 +35,13 @@ These are three different hedge objectives:
 | Current gamma targeting | Current LP model gamma plus filled-option venue gamma | Local, model-dependent sensitivity; changes with price, IV, and time |
 | Delta hedging | Actual current inventory plus filled options and the perpetual, relative to dollar-neutral or HODL exposure | Rebalancing is discrete and constrained by freshness, basis, margin, and execution limits |
 
-For one frozen bin at price `p`, with benchmark amounts `x` base and `y` quote, the ideal hedge is `x` calls plus `y / p` puts at strike `p`. This terminal identity excludes fees and option costs. It does not establish continuous gamma neutrality or realized trading profits. See [strategy mechanics](docs/STRATEGY.md) and the [derivation](docs/MATH.md).
+For one frozen bin at price $p$, with original amounts $x$ base and $y$ quote, its fee-free terminal shortfall is a weighted call and put payoff:
+
+$$
+H(S_T)=x(S_T-p)^++\frac{y}{p}(p-S_T)^+,\qquad (z)^+=\max(z,0).
+$$
+
+Long options offset the LP model's negative gamma; the perpetual separately adjusts actual inventory and filled-option delta. Vega and theta residuals are monitored without independent targets. Exact terminal replication restores the original HODL payoff before costs, which still has directional exposure. Read the [short math note: option hedge and Greeks](docs/MATH_NOTE.md), [strategy mechanics](docs/STRATEGY.md), or [full derivation](docs/MATH.md).
 
 ## Architecture
 
@@ -112,7 +118,7 @@ The next research steps are better cost and fee evidence, a defensible equity se
 
 ## Repository guide
 
-- [Strategy](docs/STRATEGY.md) · [Math](docs/MATH.md) · [Scenario assumptions](docs/SIMULATION.md)
+- [Strategy](docs/STRATEGY.md) · [Short math note](docs/MATH_NOTE.md) · [Full math](docs/MATH.md) · [Scenario assumptions](docs/SIMULATION.md)
 - [Architecture](docs/ARCHITECTURE.md) · [Demo](docs/DEMO.md) · [Local runbook](docs/RUNBOOK.md)
 - [Validation](docs/VALIDATION.md) · [Roadmap](docs/ROADMAP.md) · [Public packaging](docs/PUBLICATION.md)
 

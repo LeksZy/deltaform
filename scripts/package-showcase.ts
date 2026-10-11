@@ -12,7 +12,7 @@ const destination = join(stage, 'deltaform');
 const reviewedFiles = [
   '.gitignore', '.env.example', 'README.md', 'package.json', 'package-lock.json',
   'tsconfig.json', 'vite.config.ts', 'index.html',
-  'docs/STRATEGY.md', 'docs/MATH.md', 'docs/SIMULATION.md',
+  'docs/STRATEGY.md', 'docs/MATH.md', 'docs/MATH_NOTE.md', 'docs/SIMULATION.md',
   'docs/ARCHITECTURE.md', 'docs/DEMO.md', 'docs/RUNBOOK.md',
   'docs/VALIDATION.md', 'docs/VERIFICATION.md', 'docs/ROADMAP.md',
   'docs/PUBLICATION.md', 'docs/SOURCES.md', 'docs/VENUES.md',

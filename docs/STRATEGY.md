@@ -52,7 +52,7 @@ H(S) = sum_i H_i(S)
 
 Long vanilla options alone may not reproduce this correction. Deposits, withdrawals, ownership changes and repositioning need reconciled benchmarks and cash-flow attribution. The app exposes an explicit rebase rather than silently redefining the original position.
 
-The full derivation, mixed-bin example and conventions are in [MATH.md](MATH.md). The executable identity and normalization live in [math.ts](../src/quant/math.ts), with independently calculated terminal balances in [quant.math.test.ts](../tests/quant.math.test.ts).
+The [short math note](MATH_NOTE.md) summarizes the option hedge and Greeks. The full derivation, mixed-bin example and conventions are in [MATH.md](MATH.md). The executable identity and normalization live in [math.ts](../src/quant/math.ts), with independently calculated terminal balances in [quant.math.test.ts](../tests/quant.math.test.ts).
 
 ## From theoretical weights to an executable proposal
 

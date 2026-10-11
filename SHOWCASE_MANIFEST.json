@@ -12,7 +12,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "e0b89d39bf334248e47a6646188b4003d361b4509230a719fee298a49f27a06a"
+      "sha256": "d61d03ba87c625fe470383fa1c3c54310bd37d662eb01ab8a13464db3a98d0de"
     },
     {
       "path": "docs/ARCHITECTURE.md",
@@ -33,6 +33,10 @@
     {
       "path": "docs/MATH.md",
       "sha256": "db3fb520b8c34c171123f1fcd7603a4760a33bf145a0e96b0e5de199e798fe34"
+    },
+    {
+      "path": "docs/MATH_NOTE.md",
+      "sha256": "34ee5c238776aedbb601115c7fb2c7c9165681639a5dcffeda1f79e3f25d4f8b"
     },
     {
       "path": "docs/MULTI_ASSET_VENUES.md",
@@ -64,7 +68,7 @@
     },
     {
       "path": "docs/STRATEGY.md",
-      "sha256": "e21fc0602c93114640c0d0848b6c4585a985156fd064bce5bdef912f3300c5aa"
+      "sha256": "56f544b470baf21d4748fafcf3d59ddc98daf26ebfc942342d0f7a00c493db13"
     },
     {
       "path": "docs/UI_QA.md",
@@ -72,7 +76,7 @@
     },
     {
       "path": "docs/VALIDATION.md",
-      "sha256": "4c3012a90fdc0742d17d7b5a066e4b356704df6e76b63a90c4a600bc200801c5"
+      "sha256": "e9208ee54835dad9807b83e1ed3088e0d6c6c4f374ec0a38716e6aa15d38df6e"
     },
     {
       "path": "docs/VENUES.md",
@@ -124,7 +128,7 @@
     },
     {
       "path": "scripts/package-showcase.ts",
-      "sha256": "3108e43e56c88c7c823e22f7abd5d31172fc7419ecefddaa9af66fa0c82ed479"
+      "sha256": "edee3c6541dc0b45eb2afee12010f8ebe81ebfe11709bc104d1dff13cbc9fcc9"
     },
     {
       "path": "scripts/refresh-realized-volatility.ts",
