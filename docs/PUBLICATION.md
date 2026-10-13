@@ -12,7 +12,7 @@ This produces `releases/deltaform-showcase.zip` containing a `deltaform/` source
 
 The packager uses an explicit documentation/image allowlist and accepts only source-file extensions in `src/`, `server/`, `tests/`, and `scripts/`. It rejects symlinks, checks that example credentials are blank and live execution is disabled, and builds a fresh archive in temporary storage. It never copies the working tree wholesale or includes Git history.
 
-The public package includes the app, tests, lockfile, reviewed documentation, and three freshly captured synthetic screenshots. Inactive Derive source and tests remain for regression coverage; they are not an alternate live route.
+The public package includes the app, tests, lockfile, reviewed documentation, and three synthetic screenshots captured for the 11 October 2026 validation. Later documentation updates reuse these images. Inactive Derive source and tests remain for regression coverage; they are not an alternate live route.
 
 ## What stays local
 

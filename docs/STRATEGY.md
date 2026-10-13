@@ -4,6 +4,23 @@ Deltaform studies whether Meteora DLMM fee income can justify the cost of option
 
 The research question is open. A mathematically correct terminal payoff identity, a feasible quote, and a functioning paper hedge do not establish profitable live performance.
 
+## Intuition and design choices
+
+A liquidity provider supplies tokens for swaps and earns fees. In a DLMM pool, liquidity is distributed across fixed-price bins. As market prices move and arbitrage trades through those bins, the provider's base/quote mix changes. Impermanent loss measures the fee-free shortfall relative to holding the original tokens; it is separate from total account P&L.
+
+Options purchase expiry-specific convexity at a premium. A perpetual adjusts directional exposure without an option expiry, but requires collateral and has funding and trading costs. Deltaform makes the combined risk and implementation constraints inspectable.
+
+| Design choice | Problem it addresses | Tradeoff |
+| --- | --- | --- |
+| Preserve the original bin benchmark | Refreshing inventory should not erase the reference shortfall | New flows or repositioning require an explicit, reconciled benchmark update |
+| Fit legal listed-option quantities | Ideal bin strikes and underlying weights may not exist as executable contracts | Strike spacing, depth, lots, budget and expiry leave approximation error |
+| Separate terminal payoff, current gamma and inventory delta | A single hedge score cannot describe every risk objective | Model horizons, volatility assumptions and actual positions must remain consistent and visible |
+| Keep option proposals separate from filled holdings | An attractive quote is not an executed position | Partial fills change the book and can halt the remaining basket |
+| Persist intentions and reconcile original order IDs | A timeout or restart should not silently authorize a replacement order | Uncertain outcomes can suspend automation until evidence is available |
+| Reserve shared venue margin by asset book | Independent workers compete for the same collateral | Available margin can block an otherwise valid hedge |
+
+Here **strike** means an option's exercise price, **depth** the quantity available at quoted prices, **lot** a legal trade increment, and **basis** a price difference between assets or venues used in the hedge. The detailed objectives and limits follow below.
+
 ## Three different hedge objectives
 
 | Objective | Exposure used | What the implementation targets | Practical limit |

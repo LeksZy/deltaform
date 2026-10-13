@@ -12,11 +12,11 @@
     },
     {
       "path": "README.md",
-      "sha256": "d61d03ba87c625fe470383fa1c3c54310bd37d662eb01ab8a13464db3a98d0de"
+      "sha256": "01f8f495e594d91c872c4a811590f029269de8f50128c14fcdf03190291671f4"
     },
     {
       "path": "docs/ARCHITECTURE.md",
-      "sha256": "971dbb86ab6f8b7b0831a5706b61383217fab5507de85b8e49bf9d8783bcb823"
+      "sha256": "06648b292268f5912930f63f579cfa6e9bf41ea965e3a0842fd215841303f9ab"
     },
     {
       "path": "docs/BYBIT_API.md",
@@ -24,7 +24,7 @@
     },
     {
       "path": "docs/DEMO.md",
-      "sha256": "41987851bec6112dbaec9de661eec115bb8fea738f3e7925dbe46945e6476904"
+      "sha256": "2bf814694a1c44e945890c8f185b66b941269b2f5552ddec2af329760dbd75be"
     },
     {
       "path": "docs/DEPENDENCIES.md",
@@ -44,7 +44,7 @@
     },
     {
       "path": "docs/PUBLICATION.md",
-      "sha256": "176fd54232f8d2029cdea6d722f93924a66bcc8ba1ebb65479ec054ad1c081ba"
+      "sha256": "aa0d27475c7b6d02cef77367d6d33642f5472e021b12322c05749411f329096b"
     },
     {
       "path": "docs/REALIZED_VOLATILITY.md",
@@ -68,7 +68,7 @@
     },
     {
       "path": "docs/STRATEGY.md",
-      "sha256": "56f544b470baf21d4748fafcf3d59ddc98daf26ebfc942342d0f7a00c493db13"
+      "sha256": "4d21c4392ce56a61aed912b18fd221f2ae3356432d44a253dff678ca5989e54b"
     },
     {
       "path": "docs/UI_QA.md",
@@ -76,7 +76,7 @@
     },
     {
       "path": "docs/VALIDATION.md",
-      "sha256": "e9208ee54835dad9807b83e1ed3088e0d6c6c4f374ec0a38716e6aa15d38df6e"
+      "sha256": "b4d4dd1a6e899e5b18002065a93450f092feea1ba6f166a8a64e57fc0d5cc875"
     },
     {
       "path": "docs/VENUES.md",

@@ -54,3 +54,11 @@ Public reads demonstrate endpoint access and response normalization at a moment 
 The extracted `npm run demo:showcase` launcher also passed a separate-port smoke check: paper health, eight asset books, disconnected accounts, and `liveExecution=false`. A live-mode request returned HTTP 409 and the application remained in paper mode.
 
 The same packaging command is included in the archive so later publication copies can be rebuilt from the documented allowlist. These implementation and packaging checks were completed before publication. The reviewed source snapshot was subsequently published to [LeksZy/deltaform](https://github.com/LeksZy/deltaform); publication does not add live-trading validation.
+
+## Recruiter presentation update — 14 October 2026
+
+The README was reorganized around the research question, personal implementation contribution, three distinct hedge objectives and an explicit evidence table. Supporting documents add an interview reading path, design tradeoffs and provenance for the reused synthetic screenshots.
+
+The update was checked against the existing quantitative, execution and accounting source. All 168 local Markdown/image links and heading anchors across 20 tracked Markdown documents resolved. The six changed Markdown files were accepted by GitHub's GFM rendering API, including tables, expandable content, equation markup and image references. The refreshed allowlisted archive and manifest were checked against the local files.
+
+Only documentation and the file-hash manifest changed. Application source, scripts, tests, configuration and dependencies retain their previous contents. The automated acceptance and browser results above remain dated **11 October 2026**; the suite was not rerun for this documentation update. The three screenshots remain the original synthetic captures. No private account data or new venue/execution observations were used for the update.

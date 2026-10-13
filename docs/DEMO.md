@@ -1,5 +1,7 @@
 # Five-minute synthetic paper walkthrough
 
+This walkthrough demonstrates the implemented hedge workflow: a constrained option proposal, explicit simulated fills, and a separate perpetual delta cycle. Start with the [README](../README.md) for the research question or the [short math note](MATH_NOTE.md) for the hedge identities.
+
 Run `npm ci`, `npm run build`, and `npm run demo:showcase`, then open http://127.0.0.1:8788/.
 
 The showcase launcher is the existing isolated UI harness. It does not load `.env`, construct the live Gateway, or connect accounts. It creates a new temporary SQLite database, runs the real paper Engine, rejects live mode, and permits only synthetic fixture markets. Every launch starts fresh.
@@ -24,7 +26,7 @@ Select **Cover IL with Bybit options**, then **Confirm simulated purchase**. The
 
 ![Synthetic options purchase confirmation; no orders are sent to Bybit](showcase/paper-options-review.jpg)
 
-This screenshot was captured from the isolated harness. The displayed dollar amounts and expiry are synthetic and illustrative.
+This screenshot was captured from the isolated harness during the 11 October 2026 validation and is reused in this presentation. The displayed dollar amounts and expiry are synthetic and illustrative.
 
 ## 4. Complete a paper delta hedge
 
