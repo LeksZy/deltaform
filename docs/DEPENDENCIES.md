@@ -12,14 +12,14 @@ The audit reports **seven affected package entries: five high and two critical**
 | [`shell-quote` command injection](https://github.com/advisories/GHSA-pqg4-j6r4-53mv) | `shell-quote` → `concurrently`; two critical entries | Audit suggests `concurrently` 9.2.5 |
 | [`source-map-js` denial of service](https://github.com/advisories/GHSA-68fv-2mgg-jv7q) | `source-map-js`; one high entry | Fix available according to audit metadata |
 
-These are the audit's classifications and proposed fixes at the stated date. Reachability and exploitability in this application were not established by this showcase task. The audit is not clean, and passing tests do not remove these findings.
+These are the audit's classifications and proposed fixes at the stated date. Reachability and exploitability in this application have not been established. The findings remain unresolved; passing tests do not remediate them.
 
-The current manifest retains scoped overrides for Anchor's `toml`, Solana web3.js's `jayson`, and MetaMask's `uuid` dependency. This showcase did not upgrade dependencies or claim remediation; the older September audit counts have been superseded by the current result.
+The current manifest retains scoped overrides for Anchor's `toml`, Solana web3.js's `jayson`, and MetaMask's `uuid` dependency. The listed findings remain unresolved. The 11 October audit supersedes the older September counts.
 
 ## Runtime and validation
 
-Public setup instructions target Node **22.13+** or **24 LTS**. This task used the existing Node **23.7.0** and npm **10.9.2** environment, where typechecking, all 658 tests, and the production build passed. The runtime emitted its experimental SQLite warning and the build retained its bundle-size advisory. Passing on this existing runtime is not an additional supported-version claim.
+Public setup instructions target Node **22.13+** or **24 LTS**. The 11 October 2026 verification used Node **23.7.0** and npm **10.9.2**; typechecking, all 658 tests, and the production build passed. The runtime emitted its experimental SQLite warning and the build retained its bundle-size advisory. Passing on this existing runtime is not an additional supported-version claim.
 
 The source archive is checked separately for file completeness, exclusion of private data, local documentation links, and paper-only launch behavior; see [VALIDATION.md](VALIDATION.md).
 
-A future dependency change should receive focused compatibility and audit checks, followed by the application's existing tests and build. No production security audit, private exchange execution, or live order validation was performed here.
+A future dependency change should receive focused compatibility and audit checks, followed by the application's existing tests and build. These checks do not establish production security or live execution.

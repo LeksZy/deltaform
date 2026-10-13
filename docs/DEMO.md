@@ -1,10 +1,10 @@
-# Five-minute synthetic paper walkthrough
+# Synthetic paper demo
 
-This walkthrough demonstrates the implemented hedge workflow: a constrained option proposal, explicit simulated fills, and a separate perpetual delta cycle. Start with the [README](../README.md) for the research question or the [short math note](MATH_NOTE.md) for the hedge identities.
+The paper workflow consists of a constrained option proposal, explicit simulated fills, and a separate perpetual delta cycle. The [strategy](STRATEGY.md) defines the objectives; the [short math note](MATH_NOTE.md) derives the hedge identities.
 
 Run `npm ci`, `npm run build`, and `npm run demo:showcase`, then open http://127.0.0.1:8788/.
 
-The showcase launcher is the existing isolated UI harness. It does not load `.env`, construct the live Gateway, or connect accounts. It creates a new temporary SQLite database, runs the real paper Engine, rejects live mode, and permits only synthetic fixture markets. Every launch starts fresh.
+The paper demo launcher is the existing isolated UI harness. It does not load `.env`, construct the live Gateway, or connect accounts. It creates a new temporary SQLite database, runs the real paper Engine, rejects live mode, and permits only synthetic fixture markets. Every launch starts fresh.
 
 All displayed prices, balances, option instruments, fees, positions, and fills are synthetic. They illustrate the interface and execution state, not trading performance. A hypothetical paper purchase is not an exchange trade.
 
@@ -16,7 +16,7 @@ The eight demo assets are a fixture catalog, not a promise of eight live-support
 
 ## 2. Quote terminal IL protection
 
-The showcase starts with a common expiry, 70% coverage, a $1,500 synthetic budget, and at most six legs. Select **Quote hedge** and inspect **Proposed options**. Proposed legs are incremental purchases; they do not enter actual portfolio risk before simulated fills.
+The demo starts with a common expiry, 70% coverage, a $1,500 synthetic budget, and at most six legs. Select **Quote hedge** and inspect **Proposed options**. Proposed legs are incremental purchases; they do not enter actual portfolio risk before simulated fills.
 
 Review strike, quantity, depth, minimum size, premium, fee estimate, residual undercoverage, and tail error. The particular quote changes with the fixture time to expiry.
 
@@ -26,7 +26,7 @@ Select **Cover IL with Bybit options**, then **Confirm simulated purchase**. The
 
 ![Synthetic options purchase confirmation; no orders are sent to Bybit](showcase/paper-options-review.jpg)
 
-This screenshot was captured from the isolated harness during the 11 October 2026 validation and is reused in this presentation. The displayed dollar amounts and expiry are synthetic and illustrative.
+This screenshot was captured from the isolated harness during the 11 October 2026 validation. The displayed dollar amounts and expiry are synthetic and illustrative.
 
 ## 4. Complete a paper delta hedge
 
@@ -42,6 +42,6 @@ For current gamma targeting, pause the worker, open Settings, change **Hedge obj
 
 ## Reset and reproducibility
 
-Settings → **Load eight-asset demo** resets only the isolated paper books. Stopping and restarting the showcase creates a fresh temporary database. No production database, existing account, or live worker is used.
+Settings → **Load eight-asset demo** resets only the isolated paper books. Stopping and restarting the demo creates a fresh temporary database. No production database, existing account, or live worker is used.
 
 For deterministic adverse UI presets, see [UI_QA.md](UI_QA.md). The screenshot record is in [VALIDATION.md](VALIDATION.md).

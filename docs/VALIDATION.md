@@ -1,6 +1,6 @@
-# Showcase validation
+# Validation
 
-Prepared **11 October 2026 (Europe/Moscow)**. This report records checks performed for the public showcase and distinguishes them from historical observations and unverified live execution.
+**Verification date: 11 October 2026 (Europe/Moscow).** Automated checks, synthetic paper observations and remaining live-execution limits are documented separately below.
 
 ## Automated acceptance
 
@@ -45,20 +45,22 @@ Every balance, price, fee, option contract, position and fill in these images is
 
 Earlier development records describe public read-only venue probes and authenticated read-only account discovery/reconciliation. Those checks are documented observations at their original dates and were not repeated here. The public [source record](SOURCES.md) and [verification summary](VERIFICATION.md) retain their scope without personal account details.
 
-Public reads demonstrate endpoint access and response normalization at a moment in time. Authenticated reads demonstrate only the recorded account/schema behavior. Existing holdings do not establish that this application's order path created them. Actual multi-asset order submission, fills, final fees, venue-side recovery and strategy profitability remain unverified by this showcase.
+Public reads demonstrate endpoint access and response normalization at a moment in time. Authenticated reads demonstrate only the recorded account/schema behavior. Existing holdings do not establish that this application's order path created them. Actual multi-asset order submission, fills, final fees, venue-side recovery and strategy profitability remain unverified by these records.
 
 ## Public package
 
-`npm run showcase:package` produces an allowlisted archive with source, tests, reviewed documentation, three synthetic images, and file hashes. Private state, configuration, development prompts, prior document snapshots, historical screenshots, Git history, dependencies, and built output are excluded. The initial publication package contained **131 reviewed files plus one manifest**; later documentation updates are listed in the current manifest. A fresh extraction passed manifest SHA-256 checks, exclusion checks, and all local Markdown/image links. From that extracted source, a clean `npm ci` succeeded, all **658 tests across 42 files** passed again, and `npm run build` passed with TypeScript checking. Fresh-install tests also emitted upstream `punycode` deprecation warnings on the existing Node 23 runtime.
+`npm run showcase:package` produces an allowlisted archive with source, tests, reviewed documentation, three synthetic images, and file hashes. Private state, configuration, development prompts, prior document snapshots, historical screenshots, Git history, dependencies, and built output are excluded. The initial verified archive contained **131 reviewed files plus one manifest**. The current file list is recorded in `SHOWCASE_MANIFEST.json`. A fresh extraction passed manifest SHA-256 checks, exclusion checks, and all local Markdown/image links. From that extracted source, a clean `npm ci` succeeded, all **658 tests across 42 files** passed again, and `npm run build` passed with TypeScript checking. Fresh-install tests also emitted upstream `punycode` deprecation warnings on the existing Node 23 runtime.
 
 The extracted `npm run demo:showcase` launcher also passed a separate-port smoke check: paper health, eight asset books, disconnected accounts, and `liveExecution=false`. A live-mode request returned HTTP 409 and the application remained in paper mode.
 
-The same packaging command is included in the archive so later publication copies can be rebuilt from the documented allowlist. These implementation and packaging checks were completed before publication. The reviewed source snapshot was subsequently published to [LeksZy/deltaform](https://github.com/LeksZy/deltaform); publication does not add live-trading validation.
+The archive contains the packaging command and manifest, so its contents can be rebuilt and hash-checked.
 
-## Recruiter presentation update — 14 October 2026
+## Documentation verification — 14 October 2026
 
-The README was reorganized around the research question, personal implementation contribution, three distinct hedge objectives and an explicit evidence table. Supporting documents add an interview reading path, design tradeoffs and provenance for the reused synthetic screenshots.
+| Check | Result |
+| --- | --- |
+| Local Markdown/image links and heading anchors | 175 targets resolved across 20 Markdown documents |
+| GitHub GFM rendering | 11 Markdown documents accepted; tables, expandable content, equations and image references retained |
+| Source archive and manifest | 132 file hashes matched the local files |
 
-The update was checked against the existing quantitative, execution and accounting source. All 168 local Markdown/image links and heading anchors across 20 tracked Markdown documents resolved. The six changed Markdown files were accepted by GitHub's GFM rendering API, including tables, expandable content, equation markup and image references. The refreshed allowlisted archive and manifest were checked against the local files.
-
-Only documentation and the file-hash manifest changed. Application source, scripts, tests, configuration and dependencies retain their previous contents. The automated acceptance and browser results above remain dated **11 October 2026**; the suite was not rerun for this documentation update. The three screenshots remain the original synthetic captures. No private account data or new venue/execution observations were used for the update.
+The automated acceptance and browser results above remain dated **11 October 2026**. The three screenshots are synthetic captures from the same date. Documentation checks do not add venue or live-execution evidence.

@@ -54,4 +54,4 @@ The items below are future work, grounded in documented limitations. They are no
 
 ## Scope
 
-The priority is a credible portfolio and research showcase of the existing strategy. Automated option rolling, LP repositioning, cross-venue transfers and a broader trading platform are outside this roadmap. The public demo remains in paper mode; new claims should follow new evidence.
+The roadmap focuses on validating the economics and reliability of the existing strategy. Automated option rolling, LP repositioning, cross-venue transfers and a broader trading platform are outside this roadmap. The public demo remains in paper mode; new claims should follow new evidence.

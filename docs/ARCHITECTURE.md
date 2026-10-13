@@ -2,20 +2,16 @@
 
 Deltaform is a local TypeScript research and execution workbench. A React dashboard presents risk; a persistent Node service owns portfolio state, quotes, reconciliation and automatic perpetual hedging. The browser can close while the service continues running. The worker still depends on its host being awake and connected.
 
-## Interview reading path
+## Design decisions
 
-This eight-minute route connects the research question to representative implementation evidence. It can be followed without connecting an account.
-
-| Time | Read or inspect | Question to discuss |
+| Decision | Behavior and tradeoff | Implementation evidence |
 | --- | --- | --- |
-| 0–1 minutes | [README](../README.md): problem, contribution and maturity | What costs must LP fees justify, and what evidence would establish that? |
-| 1–3 minutes | [Short math note](MATH_NOTE.md): one mixed bin and the Greek table | Why does restoring HODL still leave delta? Why are terminal IL, current gamma and inventory delta separate targets? |
-| 3–4 minutes | System map and module guide below | Which actions are explicit, which are automated, and what state survives a restart? |
-| 4–6 minutes | [Paper walkthrough](DEMO.md), especially quote review and hedge cycles | When does a proposal become a position? What happens when an order cap or partial fill leaves residual exposure? |
-| 6–7 minutes | [Fitter](../src/quant/fit.ts), [policy](../server/policy.ts), [engine](../server/engine.ts) and their linked tests | How do lots, depth, stale data, shared margin and unknown outcomes change the decision? |
-| 7–8 minutes | [Validation](VALIDATION.md) and [roadmap](ROADMAP.md) | What is verified by fixtures, and what still needs empirical fee, execution and accounting evidence? |
-
-For a five-minute review, focus on the math note, diagram and paper walkthrough. For a deeper discussion, inspect [multi-asset margin tests](../tests/multi-asset-engine.test.ts), [capital accounting](../server/capital-tracking.ts), and [order recovery](order-recovery.md). The existing tests provide concrete cases to discuss; they are not evidence of a live trading track record.
+| Separate risk targets | Terminal IL uses a frozen benchmark; current gamma uses a horizon/IV model; the perpetual worker uses actual inventory delta | [Mathematics](MATH_NOTE.md), [payoff model](../src/quant/math.ts), [hedge policy](../server/policy.ts) |
+| Constrain option proposals | Candidates share an underlying and purchase expiry; depth, lots, fees, budget and post-rounding residuals determine feasibility | [Fitter](../src/quant/fit.ts), [fitting tests](../tests/quant.fit.test.ts) |
+| Use confirmed exposure | Proposed options are excluded from actual holdings until fills; partial or uncertain legs require reconciliation | [Options service](../server/bybit-options.ts), [state tests](../tests/bybit-options-state.test.ts) |
+| Persist execution intentions | Order IDs and intentions are saved before dispatch; unknown outcomes block replacement orders | [Engine](../server/engine.ts), [store](../server/store.ts), [recovery](order-recovery.md) |
+| Share account limits | Independent asset books reserve venue margin; shared cash and equity are counted once | [Multi-asset tests](../tests/multi-asset-engine.test.ts), [capital tracking](../server/capital-tracking.ts) |
+| Isolate paper execution | The demo uses a temporary database, disconnected accounts and fixture feeds, with live mode blocked | [UI harness](../scripts/ui-qa.ts), [demo](DEMO.md), [validation](VALIDATION.md) |
 
 ## System map
 

@@ -1,27 +1,29 @@
 # Deltaform
 
-**Can liquidity-provider fees justify the cost of hedging the position?**
+**DLMM liquidity risk, option fitting, and perpetual hedging.**
+
+## Overview
 
 A **liquidity provider (LP)** supplies tokens for swaps and earns trading fees, but swaps change the tokens held as prices move. The position can fall behind simply holding the original tokens: this shortfall is **impermanent loss (IL)**. Meteora's **DLMM** divides liquidity into fixed-price bins, making that inventory and payoff measurable at each price level.
 
-I built Deltaform to connect that payoff analysis to **Bybit option proposals**, **Hyperliquid perpetual delta hedges**, and a **multi-asset risk dashboard**. Options provide paid, expiry-specific protection; perpetual hedges adjust directional exposure and pay or receive funding. The research question is whether LP fees justify premiums, funding, fees, slippage, collateral requirements, basis and remaining risk.
+Deltaform connects that payoff analysis to **Bybit option proposals**, **Hyperliquid perpetual delta hedges**, and a **multi-asset risk dashboard**. Options provide paid, expiry-specific protection; perpetual hedges adjust directional exposure and pay or receive funding. The research question is whether LP fees justify premiums, funding, fees, slippage, collateral requirements, basis and remaining risk.
 
-**Current maturity:** a runnable synthetic paper demo with implemented quantitative models, venue adapters, persistent hedging and recovery logic. The recorded **11 October 2026** verification passed **658 tests across 42 files**, type checking and the production build. Profitable live performance and production execution remain open questions.
+**Status:** a runnable synthetic paper demo with implemented quantitative models, venue adapters, persistent hedging and recovery logic. The recorded **11 October 2026** verification passed **658 tests across 42 files**, type checking and the production build. Profitable live performance and production execution remain open questions.
 
-**Start here:** [short math note](docs/MATH_NOTE.md) · [five-minute paper demo](docs/DEMO.md) · [technical interview reading path](docs/ARCHITECTURE.md#interview-reading-path)
+[Strategy](docs/STRATEGY.md) · [Mathematics](docs/MATH_NOTE.md) · [Architecture](docs/ARCHITECTURE.md) · [Paper demo](docs/DEMO.md)
 
-## My contribution
+## Implementation
 
-| Problem | What I implemented | Evidence |
+| Component | Behavior | Evidence |
 | --- | --- | --- |
-| Turn changing LP inventory into a hedge target | Decomposed the fixed-bin terminal shortfall into weighted call and put payoffs | [Math and assumptions](docs/MATH_NOTE.md), [payoff code](src/quant/math.ts), [independent payoff tests](tests/quant.math.test.ts) |
-| Translate theoretical protection into available instruments | Fitted listed options under strike, expiry, depth, lot, budget and leg constraints; exposed residual and tail errors | [Fitter](src/quant/fit.ts), [fitting tests](tests/quant.fit.test.ts) |
-| Keep local curvature separate from terminal protection | Added a current gamma objective using LP model risk and signed filled-option Greeks | [Gamma search](src/quant/gamma.ts), [gamma tests](tests/gamma-fit.test.ts) |
-| Rebalance directional exposure without assuming every order filled | Built a persistent per-asset perpetual worker with price anchors, exposure limits, shared margin reservations and durable order intentions | [Engine](server/engine.ts), [policy](server/policy.ts), [multi-asset tests](tests/multi-asset-engine.test.ts) |
-| Make portfolio risk and accounting inspectable | Combined raw/cash Greeks, payoff scenarios, capital tracking, recorded flows, account P&L and execution state | [Dashboard](src/client/App.tsx), [risk calculations](src/client/portfolio-risk.ts), [capital accounting](server/capital-tracking.ts) |
-| Exercise the workflow and uncertain outcomes | Added paper fills, venue response normalization, partial/unknown order reconciliation and restart recovery | [Adapters](src/venues), [options service](server/bybit-options.ts), [recovery](server/hedge-recovery.ts), [validation](docs/VALIDATION.md) |
+| LP payoff model | Represents the fixed-bin terminal shortfall as weighted call and put payoffs | [Math and assumptions](docs/MATH_NOTE.md), [payoff code](src/quant/math.ts), [independent payoff tests](tests/quant.math.test.ts) |
+| Option fitting | Fits listed options under strike, expiry, depth, lot, budget and leg constraints; reports residual and tail errors | [Fitter](src/quant/fit.ts), [fitting tests](tests/quant.fit.test.ts) |
+| Current gamma targeting | Computes a gamma objective from LP model risk and signed filled-option Greeks | [Gamma search](src/quant/gamma.ts), [gamma tests](tests/gamma-fit.test.ts) |
+| Perpetual hedge worker | Runs per-asset cycles with price anchors, exposure limits, shared margin reservations and durable order intentions | [Engine](server/engine.ts), [policy](server/policy.ts), [multi-asset tests](tests/multi-asset-engine.test.ts) |
+| Risk and accounting | Displays raw/cash Greeks, payoff scenarios, capital, recorded flows, account P&L and execution state | [Dashboard](src/client/App.tsx), [risk calculations](src/client/portfolio-risk.ts), [capital accounting](server/capital-tracking.ts) |
+| Venue and paper execution | Provides paper fills, venue response normalization, partial/unknown order reconciliation and restart recovery | [Adapters](src/venues), [options service](server/bybit-options.ts), [recovery](server/hedge-recovery.ts), [validation](docs/VALIDATION.md) |
 
-## Three different hedge objectives
+## Strategy
 
 1. **Terminal IL protection:** approximate the frozen LP position's shortfall against holding its original tokens at a chosen option expiry.
 2. **Current gamma targeting:** offset the current LP model's curvature—how its price sensitivity changes—as measured at quote time.
@@ -72,9 +74,9 @@ flowchart LR
 
 The diagram shows the full application's responsibilities. The public demo uses synthetic markets, a temporary database, disconnected accounts and paper fills. Options purchases remain explicit; the background worker adjusts the perpetual hedge. The persistent service records intentions and reconciles uncertain outcomes before replacing orders.
 
-**Stack:** TypeScript, React, Vite, Recharts, Node, Express, SQLite, Decimal.js and Vitest. See the [architecture, source map and interview reading path](docs/ARCHITECTURE.md).
+**Stack:** TypeScript, React, Vite, Recharts, Node, Express, SQLite, Decimal.js and Vitest. See the [architecture and module guide](docs/ARCHITECTURE.md).
 
-## See the paper workflow
+## Demo
 
 All prices, balances, contracts, positions and fills below are **synthetic**. These are application demonstrations, not trading results. The images were captured for the 11 October 2026 validation.
 
@@ -94,9 +96,9 @@ npm run build
 npm run demo:showcase
 ```
 
-Open **http://127.0.0.1:8788/**. No `.env`, wallet or API key is needed. Each launch creates a fresh temporary paper database. Follow the [five-minute demo](docs/DEMO.md); the [local runbook](docs/RUNBOOK.md) covers the persistent service.
+Open **http://127.0.0.1:8788/**. No `.env`, wallet or API key is needed. Each launch creates a fresh temporary paper database. The [paper demo](docs/DEMO.md) documents the workflow; the [local runbook](docs/RUNBOOK.md) covers the persistent service.
 
-## Evidence and maturity
+## Validation
 
 | Evidence | What it establishes | Scope |
 | --- | --- | --- |
@@ -106,19 +108,22 @@ Open **http://127.0.0.1:8788/**. No `.env`, wallet or API key is needed. Each la
 | Historical venue observations | Dated public market reads and limited authenticated read-only discovery | [Source record](docs/SOURCES.md), [verification scope](docs/VERIFICATION.md); these do not establish live fills |
 | Further evidence required | Fee-versus-hedge economics, authenticated execution/recovery, and a complete flow-adjusted equity history | [Research roadmap](docs/ROADMAP.md) |
 
-The recorded build has a bundle-size advisory. The dated [dependency audit](docs/DEPENDENCIES.md) records five high and two critical affected package entries. Those findings remain unresolved in this presentation update.
+The recorded build has a bundle-size advisory. The dated [dependency audit](docs/DEPENDENCIES.md) records five high and two critical affected package entries. Those findings remain unresolved.
 
-## Research limits and next steps
+## Limitations
 
 The fitter is a bounded heuristic; sparse strikes, depth, lots, expiry and budgets can leave residual exposure. Cross-venue actions are non-atomic, with partial fills, stale data, basis and venue-local collateral affecting the hedge. The [strategy guide](docs/STRATEGY.md) explains these constraints and why a feasible quote is not a fill guarantee.
 
-Scenarios use explicit assumptions for fees, funding, volatility and execution. Historical strategy returns and a complete equity curve have not been established by this showcase. Account P&L uses an opening snapshot and recorded external flows; per-asset attribution remains incomplete. The application does not automate option rolling, liquidity recentering or collateral transfers; these require separate user actions at the venues.
+Scenarios use explicit assumptions for fees, funding, volatility and execution. Historical strategy returns and a complete equity curve have not been established by the recorded validation. Account P&L uses an opening snapshot and recorded external flows; per-asset attribution remains incomplete. The application does not automate option rolling, liquidity recentering or collateral transfers; these require separate user actions at the venues.
 
-The next work is to reconcile actual LP events and earned fees, measure hedge costs across price/volatility paths, and validate execution and accounting within a defined capital boundary. Favorable, unfavorable and inconclusive findings belong in that assessment. See the [focused roadmap](docs/ROADMAP.md).
+The next work is to reconcile actual LP events and earned fees, measure hedge costs across price/volatility paths, and validate execution and accounting within a defined capital boundary. See the [focused roadmap](docs/ROADMAP.md).
 
-## Reading paths
+## Documentation
 
-- **Quick overview:** this README → [short math note](docs/MATH_NOTE.md) → [paper demo](docs/DEMO.md).
-- **Technical review:** [interview reading path and module map](docs/ARCHITECTURE.md#interview-reading-path) → [strategy](docs/STRATEGY.md) → [validation](docs/VALIDATION.md).
-- **Research assumptions:** [full math](docs/MATH.md) · [scenarios](docs/SIMULATION.md) · [live-support record](docs/MULTI_ASSET_VENUES.md) · [roadmap](docs/ROADMAP.md).
-- **Local operation:** [runbook](docs/RUNBOOK.md) · [order recovery](docs/order-recovery.md) · [public packaging](docs/PUBLICATION.md).
+- [Strategy and hedge objectives](docs/STRATEGY.md).
+- [Short math note](docs/MATH_NOTE.md) · [Full derivation](docs/MATH.md).
+- [Architecture and module guide](docs/ARCHITECTURE.md).
+- [Paper demo](docs/DEMO.md) · [Local runbook](docs/RUNBOOK.md).
+- [Validation](docs/VALIDATION.md) · [Scenario assumptions](docs/SIMULATION.md).
+- [Live asset support](docs/MULTI_ASSET_VENUES.md) · [Order recovery](docs/order-recovery.md).
+- [Research roadmap](docs/ROADMAP.md) · [Source archive](docs/PUBLICATION.md).

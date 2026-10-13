@@ -1,6 +1,6 @@
 # Sources and evidence record
 
-This record separates implementation evidence from historical network observations. Source access dates and market probes below come from development records dated 26–30 September 2026; they were not refreshed for this showcase. Availability, account rules and exchange behavior must be checked again before live use.
+Source access dates and market probes below were recorded during 26–30 September 2026. These are historical observations, not current market checks. Availability, account rules and exchange behavior require fresh verification before live use.
 
 ## Mathematical scope
 

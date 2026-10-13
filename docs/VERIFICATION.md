@@ -1,6 +1,6 @@
 # Verification scope
 
-For this showcase's dated checks, commands and results, see [VALIDATION.md](VALIDATION.md). This page describes what each kind of evidence can establish. Historical observations below were recorded during September 2026 and are not fresh market checks.
+Dated checks, commands and results are recorded in [VALIDATION.md](VALIDATION.md). Local implementation tests and historical network observations have different verification scopes. The network observations below were recorded during September 2026 and are not current market checks.
 
 ## Local implementation evidence
 
@@ -8,7 +8,7 @@ The application includes mathematical decomposition, fixed benchmarks, current i
 
 Tests cover independent bin balances and mixed-bin examples, token decimals/orientation, external numerical option benchmarks, finite-differenced Greeks, budgets/depth/lot constraints, infeasible hedges, current-gamma fitting, multi-asset separation, account exclusions, starting-snapshot capital flows, shared collateral, partial fills, ambiguous outcomes and restart recovery. Authenticated exchange responses and order submissions in these tests are injected fixtures. Deterministic test keys and signing vectors establish local schema behavior, not exchange acceptance.
 
-The [isolated UI harness](UI_QA.md) uses a temporary database, synthetic accounts and the paper engine with live execution disabled. Historical browser checks exercised quoting, simulated purchase, delta hedging, pause, stale/empty/error states and partial-fill presentation. These checks do not certify wallet-extension signing or exchange fills. Paper scenario returns are analytical illustrations, not a historical performance claim; see [simulation assumptions](SIMULATION.md).
+The [isolated UI harness](UI_QA.md) uses a temporary database, synthetic accounts and the paper engine with live execution disabled. Historical browser checks exercised quoting, simulated purchase, delta hedging, pause, stale/empty/error states and partial-fill display states. These checks do not certify wallet-extension signing or exchange fills. Paper scenario returns are analytical illustrations, not a historical performance claim; see [simulation assumptions](SIMULATION.md).
 
 ## Historical network observations
 

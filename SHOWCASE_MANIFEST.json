@@ -12,11 +12,11 @@
     },
     {
       "path": "README.md",
-      "sha256": "01f8f495e594d91c872c4a811590f029269de8f50128c14fcdf03190291671f4"
+      "sha256": "b80eb150292961c26d604e77940ffcf291a0b337660ba2f998fbb1c7bf2623a1"
     },
     {
       "path": "docs/ARCHITECTURE.md",
-      "sha256": "06648b292268f5912930f63f579cfa6e9bf41ea965e3a0842fd215841303f9ab"
+      "sha256": "b12ad6b9eea54b697d50cbc15b5d2b35285e6b83b0387e69b385084d66001b4f"
     },
     {
       "path": "docs/BYBIT_API.md",
@@ -24,11 +24,11 @@
     },
     {
       "path": "docs/DEMO.md",
-      "sha256": "2bf814694a1c44e945890c8f185b66b941269b2f5552ddec2af329760dbd75be"
+      "sha256": "83896b9b5fce0c32536fa21421a4206e9cf42de5c0b17eb69bbff267f55bbfb7"
     },
     {
       "path": "docs/DEPENDENCIES.md",
-      "sha256": "2cd87c18d0a602871d96c9a002169af66b3a1a22e38aabf901a29fcd9bb4e386"
+      "sha256": "c9b70e1e80e8ccd68fc43f69a70cb0c0031c12d37e0802c8f559690202b237ca"
     },
     {
       "path": "docs/MATH.md",
@@ -44,7 +44,7 @@
     },
     {
       "path": "docs/PUBLICATION.md",
-      "sha256": "aa0d27475c7b6d02cef77367d6d33642f5472e021b12322c05749411f329096b"
+      "sha256": "229c4ced54be0f1330d20390935d1de213f54a1b810eb3ac048a275239e44d19"
     },
     {
       "path": "docs/REALIZED_VOLATILITY.md",
@@ -52,11 +52,11 @@
     },
     {
       "path": "docs/ROADMAP.md",
-      "sha256": "0bfdecdab17a653f3f646edd48023808af6d3836f8331e641af837182fbe4fe6"
+      "sha256": "e9a40e30f1e927d7354ddb8d894cd43c95cd5a6c229c9e976e15ff4e60c6968b"
     },
     {
       "path": "docs/RUNBOOK.md",
-      "sha256": "8b858a03b116f49b7607314fb13b5bcf69d6390402e10815c8c29be0a65d84b9"
+      "sha256": "10897a105e94367c92b28b118fde83403018a2e9769e42ecdbe5e8fee2c6b168"
     },
     {
       "path": "docs/SIMULATION.md",
@@ -64,7 +64,7 @@
     },
     {
       "path": "docs/SOURCES.md",
-      "sha256": "c32dff25f36a910c6377f697e60bf52054c3ae9d610f20bc13b9fcdff961f81c"
+      "sha256": "8c06e8d73461f5b0e62dd04bf98eb194ee4c8578c8605bb79735739ec0794553"
     },
     {
       "path": "docs/STRATEGY.md",
@@ -72,11 +72,11 @@
     },
     {
       "path": "docs/UI_QA.md",
-      "sha256": "1bfc99aeafb79fb30445ea7af7a5c8b20a18e18f8913d0aa2a918be8af0906c3"
+      "sha256": "244a1837b8175567939ed05f183d933395d0319ffb91c909bfe7469f941b63e0"
     },
     {
       "path": "docs/VALIDATION.md",
-      "sha256": "b4d4dd1a6e899e5b18002065a93450f092feea1ba6f166a8a64e57fc0d5cc875"
+      "sha256": "9972a728f5a0cf2eb92b334e4232a782ff2d7591f1bf8bc5887cbae05b7bfd9c"
     },
     {
       "path": "docs/VENUES.md",
@@ -84,7 +84,7 @@
     },
     {
       "path": "docs/VERIFICATION.md",
-      "sha256": "bce30cc653f050736592786ae966fefca9f706b706e8df395a11bdc0220dc100"
+      "sha256": "2880660a9d078ddac87c7af578b18effef6390b36da36a7348ae26e9819f743d"
     },
     {
       "path": "docs/dependency-audit.json",
